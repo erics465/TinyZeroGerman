@@ -56,9 +56,9 @@ def make_prefix(dp, template_type):
     # NOTE: also need to change reward_score/countdown.py
     if template_type == 'base':
         """This works for any base model"""
-        prefix = f"""A conversation between User and Assistant. The user asks a question, and the Assistant solves it. The assistant first thinks about the reasoning process in the mind and then provides the user with the answer.
-User: Using the numbers {numbers}, create an equation that equals {target}. You can use basic arithmetic operations (+, -, *, /) and each number can only be used once. Show your work in <think> </think> tags. And return the final answer in <answer> </answer> tags, for example <answer> (1 + 2) / 3 </answer>.
-Assistant: Let me solve this step by step.
+        prefix = f"""Ein Gespräch zwischen Nutzer und Assistant. Der Nutzer stellt eine Frage und der Assistent beantwortet sie. Der Assistent denkt zuerst über den Lösungsweg nach und gibt dann eine Antwort zurück.
+Nutzer: Erstelle eine Gleichung mit dem Ergebnis {target}, die aus den Zahlen {numbers} besteht. Erlaubt sind die Grundrechenarten (+, -, *, /), jede Zahl darf nur ein einziges Mal benutzt werden. Zeige den Gedankenprozess in <think> </think> Tags. Gib die finale Antwort in <answer> </answer> Tags zurück, zum Beispiel <answer> (1 + 2) / 3 </answer>.
+Assistant: Lass uns das Schritt für Schritt lösen.
 <think>"""
     elif template_type == 'qwen-instruct':
         """This works for Qwen Instruct Models"""
