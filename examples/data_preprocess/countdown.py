@@ -62,7 +62,7 @@ Assistant: Lass uns das Schritt für Schritt lösen.
 <think>"""
     elif template_type == 'qwen-instruct':
         """This works for Qwen Instruct Models"""
-        prefix = f"""<|im_start|>system\nYou are a helpful assistant. You first thinks about the reasoning process in the mind and then provides the user with the answer.<|im_end|>\n<|im_start|>user\n Using the numbers {numbers}, create an equation that equals {target}. You can use basic arithmetic operations (+, -, *, /) and each number can only be used once. Show your work in <think> </think> tags. And return the final answer in <answer> </answer> tags, for example <answer> (1 + 2) / 3 </answer>.<|im_end|>\n<|im_start|>assistant\nLet me solve this step by step.\n<think>"""
+        prefix = f"""<|im_start|>system\nDu bist ein hilfsbereiter Assistent. Du denkst zuerst über den Lösungsweg nach und gibst dann eine Antwort zurück.<|im_end|>\n<|im_start|>User\n Erstelle eine Gleichung mit dem Ergebnis {target}, die nur die Zahlen {numbers} enthält. Nutze dafür die Grundrechenarten (+, -, *, /), jede Zahl kann nur einmal verwendet werden. Zeige den Denkprozess und Lösungsweg in <think> </think> Tags. Gib die finale Antwort in <answer> </answer> Tags zurück, zum Beispiel <answer> (1 + 2) / 3 </answer>.<|im_end|>\n<|im_start|>assistant\nLass mich das Schritt für Schritt lösen.\n<think>"""
     return prefix
 
 
